@@ -47,8 +47,8 @@ enum hal_version {
 
 // Connnect PowerHAL
 static hal_version connectPowerHalLocked() {
-    static bool gPowerHalHidlExists = true;
-    static bool gPowerHalAidlExists = true;
+    static bool gPowerHalHidlExists = false;
+    static bool gPowerHalAidlExists = false;
 
     if (!gPowerHalHidlExists && !gPowerHalAidlExists) {
         return NONE;
